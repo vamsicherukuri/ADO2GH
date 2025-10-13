@@ -2,7 +2,14 @@
 # sample echo pipeline to test the integration bw GitHub and ADO
 
 trigger:
-- main
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
 
 pool:
   vmImage: ubuntu-latest
